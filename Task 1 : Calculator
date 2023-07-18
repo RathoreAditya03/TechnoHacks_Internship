@@ -1,0 +1,92 @@
+#include <iostream>
+ using namespace std;
+
+ int Calculator()
+ {
+    cout<<"HERE ARE CALCULATOR OPERATIONS: \n";
+    cout << "\n 1. Addition"
+         << "\n 2. Subtraction"
+         << "\n 3. Multiplication"
+         << "\n 4. Division";
+    int n;
+    cout << "\n Which operation do you want to execute: ";
+    cin >>n;
+
+    
+    switch (n)
+    {
+
+    case 1:
+        int num1 , num2 , add;
+        cout << "Enter two numbers:\n";
+        cin >> num1;
+        cin >> num2;
+        add=num1+num2;
+        cout<<"Addition of "<< num1 << " and "<< num2 << " is: "<<add;
+        break;
+
+    case 2:       
+        int num3 , num4 , sub;
+        cout << "Enter two numbers:\n";
+        cin >> num3;
+        cin >> num4;
+        sub=num3-num4;
+        cout<<"Subtraction of "<< num3 << " and "<< num4 << " is: "<<sub;
+        break;    
+
+    case 3:
+        int num5 , num6 , mul;
+        cout << "Enter two numbers:\n";
+        cin >> num5;
+        cin >> num6;
+        mul=num5*num6;
+        cout<<"Multiplication of "<< num5 << " and "<< num6 << " is: "<<mul;
+        break;
+
+    case 4:
+        int num7 , num8 , div;
+        cout << "Enter two numbers:\n";
+        cin >> num7;
+        cin >> num8;
+        div=num7/num8;
+        cout<<"Division of "<< num7 << " and "<< num8 << " is: "<<div;
+        break;
+
+    default:
+        cout << "*Invalid Choice*";
+        break;
+    }
+    return 0;
+ }
+
+ int loop()
+ {
+    char cont;
+    do
+    {
+        cout << "\n\n---------------------------------\n";
+        cout << "\nDo you want to perform other operations... ??\n"
+             << "For YES 'y'"
+             << " For NO 'n'" << endl;
+        cin >> cont;
+        cout<<endl;
+        if (cont == 'y')
+        {
+            Calculator();
+        }
+        else
+        {
+            cout << "**Thank You**\n";
+            cout<<endl;
+        }
+    } while (cont == 'y');
+    return 0;
+ }
+
+int main()
+ {
+    cout << "\n\n** Welcome User **\n";
+    Calculator();
+    loop();
+    return 0;
+ }
